@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: reviews_json
+    database: ONE_BITE_PIZZA
+    schema: RAW
+  
+    tables:
+      - name: reviews_json
