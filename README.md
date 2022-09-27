@@ -10,3 +10,6 @@ In this project, the review data is collected via the One Bite REST API and stag
 
 ## Motivation
 The motivation for this project is primarily to gain experience using Apache Airflow, DBT & Snowflake. A secondary goal of the project is to showcase SQL and Tableau proficiency. 
+
+
+## Architecture
