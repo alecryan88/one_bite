@@ -9,4 +9,4 @@ https://onebite.app is a mobile application created by Barstool Sports, a leadin
 In this project, the review data is collected via the One Bite REST API and staged in Amazon S3. The data is then copied into Snowflake where it is transformed using dbt. The transformed models are copied to a Google Sheet where Tableau Public can connect and display the data for free. This entire ELT workflow is orchestrated by Apache Airflow running in Docker containers.
 
 ## Motivation
-The reason I chose to do this project is to gain some experience using tools such as: Apache Airflow, DBT & Snowflake. I also wanted to showcase some SQL and Tableau skills that I've honed working as a Senior Business Intelligence Analyst.
+The motivation for this project is to gain experience using the following tools: Apache Airflow, DBT & Snowflake. Additionally, to showcase SQL and Tableau proficiency. 
