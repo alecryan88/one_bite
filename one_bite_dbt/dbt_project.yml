@@ -25,9 +25,8 @@ clean-targets:         # directories to be removed by `dbt clean`
     - "dbt_modules"
 
 vars:
-  # The `start_date` variable will be accessible in all resources
-  run_start: '1994-06-22'
-  run_end: '1994-06-22'
+  run_start: '1994-06-22' #Placeholder, value will always be passed in through airflow run config
+  run_end: '1994-06-22' #Placeholder, value will always be passed in through airflow run config
 
 models:
     one_bite_dbt:
@@ -38,6 +37,6 @@ models:
             tags: sheets #Will be sent to Google Sheets for tableau usage
         
 seeds: 
-    stage_region:
+    stage_regions:
         enabled: True
         quotes_columns: False
