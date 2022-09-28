@@ -1,4 +1,4 @@
-# One Bite Pizza Review Data Pipeline
+# One Bite Data Pipeline
 
 An end-to-end data application to analyze pizza reviews.
 
