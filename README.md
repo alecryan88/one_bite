@@ -14,15 +14,18 @@ The motivation for this project is primarily to gain experience using Apache Air
 ## Architecture
 <img src="https://github.com/alecryan88/one_bite/blob/main/pipeline.png" width=100% height=70%>
 
-> Folder structure options and naming conventions for software projects
 
-### A typical top-level directory layout
+
+### Project Directory
 
     .
-    ├── build                   # Compiled files (alternatively `dist`)
-    ├── docs                    # Documentation files (alternatively `doc`)
-    ├── src                     # Source files (alternatively `lib` or `app`)
-    ├── test                    # Automated tests (alternatively `spec` or `tests`)
-    ├── tools                   # Tools and utilities
-    ├── LICENSE
+    ├── dags                    # Dag files and modules used in dag
+    ├── include                 # Additional SQL files used in dag
+    ├── one_bite_dbt            # Dbt project directory
+    ├── plugins                 # ...
+    ├── .gitignore              # Tools and utilities
+    ├── docker-compose.yaml     # Container configuration file
+    ├── Dockerfile              # File that builds the docker image
+    ├── pipeline.png            # Architecture diagram created with draw.io
+    ├── requirements.txt        # File containing dependencies for project
     └── README.md
