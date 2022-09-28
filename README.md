@@ -2,7 +2,6 @@
 
 An end-to-end data application to analyze pizza reviews.
 
-=======
 ## Overview
 https://onebite.app is a mobile application created by Barstool Sports, a leading sports and pop culture media company. The mobile application allows users to review pizza restaurants in their area and give a short description of their experience along with an overall score.
 
