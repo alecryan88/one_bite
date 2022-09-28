@@ -22,8 +22,8 @@ The motivation for this project is primarily to gain experience using Apache Air
     ├── dags                    # Dag files and modules used in dag
     ├── include                 # Additional SQL files used in dag
     ├── one_bite_dbt            # Dbt project directory
-    ├── plugins                 # ...
-    ├── .gitignore              # Tools and utilities
+    ├── plugins                 
+    ├── .gitignore              
     ├── docker-compose.yaml     # Container configuration file
     ├── Dockerfile              # File that builds the docker image
     ├── pipeline.png            # Architecture diagram created with draw.io
