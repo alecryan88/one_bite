@@ -13,4 +13,4 @@ The motivation for this project is primarily to gain experience using Apache Air
 
 
 ## Architecture
-<img src="https://github.com/alecryan88/one_bite/blob/main/diagram.png" width=100% height=70%>
+<img src="https://github.com/alecryan88/one_bite/blob/main/workflow.png" width=100% height=70%>
