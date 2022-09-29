@@ -3,11 +3,11 @@ default:
   outputs:
     dev:
       type: snowflake
-      account: pua88554 #"{{ env_var('SNOWFLAKE_ACCOUNT') }}"
-      user: flyers88 #"{{ env_var('SNOWFLAKE_USER') }}"
-      password: VampireWeekend2021 #"{{ env_var('SNOWFLAKE_PASS') }}"
-      role: ACCOUNTADMIN #"{{ env_var('SNOWFLAKE_ROLE') }}"
-      database: ONE_BITE_PIZZA  #"{{ env_var('SNOWFLAKE_DB') }}"
-      warehouse: ONE_BITE_PIZZA #"{{ env_var('SNOWFLAKE_WH') }}"
-      schema: PUBLIC #"{{ env_var('SNOWFLAKE_SCHEMA') }}"
+      account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
+      user: "{{ env_var('SNOWFLAKE_USER') }}"
+      password: "{{ env_var('SNOWFLAKE_PASS') }}"
+      role: "{{ env_var('SNOWFLAKE_ROLE') }}"
+      database: "{{ env_var('SNOWFLAKE_DB') }}"
+      warehouse: "{{ env_var('SNOWFLAKE_WH') }}"
+      schema: "{{ env_var('SNOWFLAKE_SCHEMA') }}"
       threads: 10

@@ -15,7 +15,7 @@ profile: 'default'
 model-paths: ["models"]
 analysis-paths: ["analysis"]
 test-paths: ["tests"]
-data-paths: ["data"]
+seed-paths: ["seeds"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
 
@@ -36,7 +36,3 @@ models:
             materialized: incremental
             tags: sheets #Will be sent to Google Sheets for tableau usage
         
-seeds: 
-    stage_regions:
-        enabled: True
-        quotes_columns: False

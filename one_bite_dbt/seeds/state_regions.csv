@@ -1,4 +1,4 @@
-state,state_code,region,division
+state_name,state_code,region_name,division_name
 Alaska,AK,West,Pacific
 Alabama,AL,South,East South Central
 Arkansas,AR,South,West South Central
