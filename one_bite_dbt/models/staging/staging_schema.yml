@@ -1,0 +1,17 @@
+version: 2
+
+models:
+
+  - name: flatten_review_arrays
+    description: Flattens out JSON files to database table
+    columns:
+      - name: partition_date
+        description: '{{ doc("partition_date") }}'
+        tests:
+          - not_null
+          
+      - name: review_id
+        description: '{{ doc("review_id") }}'
+        
+      - name: json_extract 
+        description: '{{ doc("json_extract") }}'

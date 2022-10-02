@@ -66,5 +66,12 @@ class SnowflakeToSheetsOperator(BaseOperator):
 
         self.connect_to_sheet(self.sheet_name)
         self.create_or_replace_worksheet(self.model_name)
-        result = self.hook.get_pandas_df(f"SELECT * FROM {self.model_name}")
+        result = self.hook.get_pandas_df(
+            #Getlast 180 days from model
+            f"""
+                SELECT * 
+                FROM {self.model_name} 
+                WHERE partition_date >= dateadd('day', -180, current_date)
+                """
+            )
         self.wks.set_dataframe(result, (1,1), fit=True)
