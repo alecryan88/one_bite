@@ -1,3 +1,10 @@
+{{
+    config(
+        unique_key=['partition_date', 'review_id']
+    )
+}}
+
+
 with duplicate_reviews as (
         Select 
                 partition_date::date as partition_date,
@@ -23,4 +30,5 @@ Select
 
 from duplicate_reviews
 
-where rn = 1
+
+WHERE rn = 1

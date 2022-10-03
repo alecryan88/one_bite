@@ -71,7 +71,8 @@ class SnowflakeToSheetsOperator(BaseOperator):
             f"""
                 SELECT * 
                 FROM {self.model_name} 
-                WHERE partition_date >= dateadd('day', -180, current_date)
+                WHERE partition_date >= dateadd('day', -181, current_date)
+                and partition_date < current_date
                 """
             )
         self.wks.set_dataframe(result, (1,1), fit=True)

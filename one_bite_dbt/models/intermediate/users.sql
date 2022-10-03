@@ -1,3 +1,9 @@
+{{
+    config(
+        unique_key=['partition_date', 'review_id']
+    )
+}}
+
 Select  
         partition_date::date as partition_date,
         json_extract:id::string as review_id,
@@ -10,9 +16,9 @@ Select
         json_extract:user:email::string as email,
         json_extract:user:appleId::string as apple_id,
         json_extract:user:facebookId::string as facebook_id,
-        json_extract:user:admin::boolean as admin,
-        json_extract:user:banned::boolean as banned,
-        json_extract:user:deleted::boolean as deleted
+        json_extract:user:admin::boolean as user_admin,
+        json_extract:user:banned::boolean as user_banned,
+        json_extract:user:deleted::boolean as user_deleted
         
 from {{ ref('flatten_review_arrays') }}
 

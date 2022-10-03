@@ -12,6 +12,8 @@ models:
           
       - name: review_id
         description: '{{ doc("review_id") }}'
+        tests:
+          - not_null
         
       - name: json_extract 
         description: '{{ doc("json_extract") }}'

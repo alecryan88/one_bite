@@ -1,0 +1,41 @@
+version: 2
+
+models:
+
+  - name: review_aggregate
+    description: Aggregate table used to analyze review counts across multiple dimensions
+    columns:
+      - name: partition_date
+        description: '{{ doc("partition_date") }}'
+        tests:
+          - not_null
+
+      - name: country_code
+        description: '{{ doc("country_code") }}'
+        
+      - name: state_code
+        description: '{{ doc("state_code") }}'
+        
+      - name: state_name
+        description: '{{ doc("state_name") }}'
+        
+      - name: region_name
+        description: '{{ doc("region_name") }}'
+      
+      - name: division_name
+        description: '{{ doc("division_name") }}'
+        
+      - name: city_name
+        description: '{{ doc("city_name") }}'
+
+      - name: price_level
+        description: '{{ doc("price_level") }}'
+      
+      - name: user_type
+        description: '{{ doc("user_type") }}'
+        
+      - name: review_count
+        description: '{{ doc("review_count") }}'
+
+      - name: review_score_total
+        description: '{{ doc("review_score_total") }}'

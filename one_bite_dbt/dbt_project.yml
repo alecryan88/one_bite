@@ -29,10 +29,9 @@ vars:
   run_end: '1994-06-22' #Placeholder, value will always be passed in through airflow run config
 
 models:
-    one_bite_dbt:
-        staging:
-            materialized: incremental
+    one_bite_dbt:  
+        +materialized: 'incremental'
+        +incremental_strategy: 'delete+insert'
         analytics:
-            materialized: incremental
             tags: sheets #Will be sent to Google Sheets for tableau usage
         

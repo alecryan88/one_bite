@@ -1,0 +1,140 @@
+version: 2
+
+models:
+
+  - name: reviews
+    description: Fact table for reviews 
+    columns:
+      - name: partition_date
+        description: '{{ doc("partition_date") }}'
+        tests:
+          - not_null
+
+      - name: review_id
+        description: '{{ doc("review_id") }}'
+        tests:
+          - not_null
+        
+      - name: review_timestamp
+        description: '{{ doc("review_timestamp") }}'
+        
+      - name: deleted_review
+        description: '{{ doc("deleted_review") }}'
+        
+      - name: featured_review
+        description: '{{ doc("featured_review") }}'
+      
+      - name: review_message
+        description: '{{ doc("review_message") }}'
+        
+      - name: review_score
+        description: '{{ doc("review_score") }}'
+
+      - name: review_status
+        description: '{{ doc("review_status") }}'
+      
+      - name: user_id
+        description: '{{ doc("user_id") }}'
+        
+      - name: venue_id
+        description: '{{ doc("venue_id") }}'
+
+
+  - name: users
+    description: Demographic information for reviewers.
+    columns:
+      - name: partition_date
+        description: '{{ doc("partition_date") }}'
+        tests:
+          - not_null
+
+      - name: review_id
+        description: '{{ doc("review_id") }}'
+        tests:
+          - not_null
+
+      - name: user_id
+        description: '{{ doc("user_id") }}'
+
+      - name: user_type
+        description: '{{ doc("user_type") }}'
+
+      - name: user_created_at
+        description: '{{ doc("user_created_at") }}'
+
+      - name: first_name
+        description: '{{ doc("first_name") }}'
+
+      - name: last_name
+        description: '{{ doc("last_name") }}'
+
+      - name: username
+        description: '{{ doc("username") }}'
+
+      - name: email
+        description: '{{ doc("email") }}'
+
+      - name: apple_id
+        description: '{{ doc("apple_id") }}'
+
+      - name: facebook_id
+        description: '{{ doc("facebook_id") }}'
+
+      - name: user_admin
+        description: '{{ doc("user_admin") }}'
+
+      - name: user_banned
+        description: '{{ doc("user_banned") }}'
+
+      - name: user_deleted
+        description: '{{ doc("user_deleted") }}'
+
+
+  - name: venues
+    description: Descriptive information for each venue.
+    columns:
+      - name: partition_date
+        description: '{{ doc("partition_date") }}'
+        tests:
+          - not_null
+
+      - name: review_id
+        description: '{{ doc("review_id") }}'
+        tests:
+          - not_null
+
+      - name: venue_id
+        description: '{{ doc("venue_id") }}'
+
+      - name: venue_name
+        description: '{{ doc("venue_name") }}'
+
+      - name: address
+        description: '{{ doc("address") }}'
+
+      - name: address_more
+        description: '{{ doc("address_more") }}'
+
+      - name: city_name
+        description: '{{ doc("city_name") }}'
+
+      - name: country_code
+        description: '{{ doc("country_code") }}'
+
+      - name: state_code
+        description: '{{ doc("state_code") }}'
+
+      - name: timezone
+        description: '{{ doc("timezone") }}'
+
+      - name: price_level
+        description: '{{ doc("price_level") }}'
+
+      - name: venue_zip
+        description: '{{ doc("venue_zip") }}'
+
+      - name: venue_type
+        description: '{{ doc("venue_type") }}'
+
+      - name: phone_number
+        description: '{{ doc("phone_number") }}'

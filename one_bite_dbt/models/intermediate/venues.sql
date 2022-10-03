@@ -1,3 +1,10 @@
+
+{{
+    config(
+        unique_key=['partition_date', 'review_id']
+    )
+}}
+
 Select 
         partition_date::date as partition_date,
         json_extract:id::string as review_id,
