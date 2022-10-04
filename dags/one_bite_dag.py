@@ -5,12 +5,11 @@ from airflow.providers.snowflake.transfers.s3_to_snowflake import S3ToSnowflakeO
 from airflow.utils.task_group import TaskGroup
 from airflow.operators.python_operator import PythonOperator
 
-#Custom Python modules
-from modules.dbt_dag_parser import DbtDagParser
-from modules.dbt_to_sheets_parser import DbtSheetsParser
-from modules.one_bite_to_s3 import oneBiteToS3Operator
+from common.scripts.dbt_dag_parser import DbtDagParser
+from common.scripts.dbt_to_sheets_parser import DbtSheetsParser
+from common.scripts.run_config import set_run_config
+from common.operators.one_bite_to_s3 import oneBiteToS3Operator
 
-import logging
 import os
 from datetime import datetime, timedelta
 
@@ -39,32 +38,8 @@ with DAG(
 	start_date=datetime(2021, 1, 1),
 	catchup=False,
 	tags=['one_bite'],
-	template_searchpath='/opt/airflow/include/'
+	template_searchpath='/opt/airflow/include/sql/'
 ) as dag:
-
-	def set_run_config(ds, **kwargs):
-		#Checks to see if runtime config was passed via manual trigger
-		manual_trigger_config = kwargs["dag_run"].conf 
-		
-		try:
-			run_start = manual_trigger_config['backfill_start']
-			run_end = manual_trigger_config['backfill_end']
-			backfill_status = True
-			logging.info(f'The backfill status is {backfill_status}')
-		
-		except KeyError:
-			backfill_status = False
-			run_start = ds
-			run_end = ds
-			logging.info(f'The backfill status is {backfill_status}')
-
-
-		logging.info(f'The run_start and run_end are {run_start} and {run_end}')
-
-		kwargs['ti'].xcom_push(key='run_start',value=run_start)
-		kwargs['ti'].xcom_push(key='run_end',value=run_end)
-		kwargs["ti"].xcom_push(key='backfill_status', value=backfill_status)
-
 
 	set_run_config = PythonOperator(
 		task_id='set_run_config',

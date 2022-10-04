@@ -4,6 +4,8 @@ from airflow.models.baseoperator import BaseOperator
 from airflow.utils.decorators import apply_defaults
 from airflow.providers.snowflake.hooks.snowflake import SnowflakeHook
 import pygsheets
+import json
+import boto3
 
 class SnowflakeToSheetsOperator(BaseOperator):
     """ A custom operator for copying dbt models to google sheets.
@@ -42,7 +44,7 @@ class SnowflakeToSheetsOperator(BaseOperator):
        
         """
 
-        gc = pygsheets.authorize(service_account_file='/opt/airflow/dags/modules/service_file.json')
+        gc = pygsheets.authorize(service_account_file='/opt/airflow/include/sheets/service_file.json')
         self.sh = gc.open(sheet_name) # Open the google sheet phthontest
 
 

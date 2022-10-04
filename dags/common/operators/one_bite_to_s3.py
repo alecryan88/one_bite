@@ -4,7 +4,7 @@ import pandas as pd
 import concurrent.futures
 from multiprocessing.pool import ThreadPool
 import json
-from modules.aws import awsHandler
+from common.scripts.aws import awsHandler
 from datetime import timedelta, datetime
 import logging
 from airflow.models.baseoperator import BaseOperator

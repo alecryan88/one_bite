@@ -1,4 +1,4 @@
-from modules.snowflake_to_sheets import SnowflakeToSheetsOperator
+from common.operators.snowflake_to_sheets import SnowflakeToSheetsOperator
 import json
 import logging
 import os
