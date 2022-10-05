@@ -6,7 +6,7 @@ An end-to-end data application to analyze pizza reviews.
 https://onebite.app is a mobile application created by Barstool Sports, a leading sports and pop culture media company. The mobile application allows users to review pizza restaurants in their area and give a short description of their experience along with an overall score. The app has a web version that exposes an API where review data can be downloaded.
 
 ## Motivation
-The motivation for this project is primarily to gain experience using Apache Airflow, DBT & Snowflake. A secondary goal of the project is to showcase SQL and Tableau proficiency. 
+The motivation for this project is primarily to demonstratee experience using Apache Airflow & DBT. A secondary goal of the project is to showcase SQL and Tableau proficiency. The final, and most important goal, is to find the best Pizza in my area.  
 
 
 ## Architecture
