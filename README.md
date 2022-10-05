@@ -12,7 +12,7 @@ The motivation for this project is primarily to demonstratee experience using Ap
 ## Architecture
 <img src="https://github.com/alecryan88/one_bite/blob/main/pipeline.png" width=100% height=10%>
 
-In this project, the user generated review data is collected via the One Bite REST API and staged in an Amazon S3 bucket. The data is then copied from the S3 bucket into Snowflake where it is transformed using dbt. The transformed models that have a specific tag in the dbt project are copied to a Google Sheet where my [Tableau Public Dashboard](https://public.tableau.com/app/profile/alec7813/viz/OneBiteMetrics/OneBiteMetrics) can connect and display the data for free. This entire ELT workflow is orchestrated by Apache Airflow running locally in Docker containers. 
+In this project, the user generated review data is collected via the One Bite REST API and staged in an Amazon S3 bucket. The data is then copied from the S3 bucket into Snowflake where it is transformed using dbt. The transformed models that have a specific tag in the dbt project are copied to a Google Sheet where my [Tableau Public Dashboard](https://public.tableau.com/app/profile/alec7813/viz/OneBiteMetrics/OneBiteMetrics) can connect and display the data for free. This entire pipeline is orchestrated by Apache Airflow running locally in Docker containers. 
 
 
 ### Project Directory
