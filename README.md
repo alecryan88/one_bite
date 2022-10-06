@@ -62,19 +62,3 @@ The [Tableau Public](https://public.tableau.com/app/profile/alec7813/viz/OneBite
 
 
 <img src="png_files/tableau.png" width=100% height=200%>
-
-
-
-### Project Directory
-
-    .
-    ├── dags                    # Dag files and modules used in dag
-    ├── include                 # Additional SQL files used in dag
-    ├── one_bite_dbt            # Dbt project directory
-    ├── plugins                 
-    ├── .gitignore              
-    ├── docker-compose.yaml     # Container configuration file
-    ├── Dockerfile              # File that builds the docker image
-    ├── pipeline.png            # Architecture diagram created with draw.io
-    ├── requirements.txt        # File containing dependencies for project
-    └── README.md
