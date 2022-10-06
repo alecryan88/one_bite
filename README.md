@@ -39,9 +39,8 @@ Below are the individual tasks that run in the Airflow DAG (Directed Acyclic Gra
 
 
 ## Tableau Dashboard 
-This first dashboard displays basic times series metrics. This dashboard is meant to mirror a basic KPI dashboard or operational report. On the right hand side are all of the filters/parameters available for segmenting and filtering the dashboard.
+This first dashboard displays basic times series metrics. This dashboard is meant to mirror a basic KPI dashboard or operational report. On the right hand side are all of the filters/parameters available for segmenting and filtering the dashboard. This allows drill downs into specific geographic regions and price levels to help understand where users are reviewing.
 
-When 
 
 <img src="png_files/tableau.png" width=100% height=200%>
 
