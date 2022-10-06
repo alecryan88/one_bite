@@ -15,7 +15,7 @@ The motivation for this project is primarily to gain experience using Apache Air
 <img src="png_files/pipeline.png" width=100% height=70%>
 
 ## Airflow DAG
-Below are the individual tasks that run in the Airflow DAG (Directed Acyclic Graph). A Task is the basic unit of execution in Airflow. Tasks are arranged into DAGs, and then have upstream and downstream dependencies set between them into order to express the order they should run in. A TaskGroup can be used to organize tasks into hierarchical groups in Graph view. It is useful for creating repeating patterns and cutting down visual clutter.
+A DAG (Directed Acyclic Graph) is the core concept of Airflow, collecting Tasks together, organized with dependencies and relationships to say how they should run. A Task is the basic unit of execution in Airflow. Tasks are arranged into DAGs, and then have upstream and downstream dependencies set between them into order to express the order they should run in. A TaskGroup can be used to organize tasks into hierarchical groups in Graph view. It is useful for creating repeating patterns and cutting down visual clutter. Below are the individual tasks that run in the One Bite DAG:
 
 <img src="png_files/dag.png" width=100% height=70%>
 
