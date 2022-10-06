@@ -17,7 +17,7 @@ The motivation for this project is primarily to gain experience using Apache Air
 ## Airflow Overview
 [Apache Airflow](https://airflow.apache.org/) is an open-source platform for developing, scheduling, and monitoring batch-oriented workflow. A DAG (Directed Acyclic Graph) is the core concept of Airflow, collecting Tasks together, organized with dependencies and relationships to say how they should run. A Task is the basic unit of execution in Airflow. Tasks are arranged into DAGs, and then have upstream and downstream dependencies set between them into order to express the order they should run in. A TaskGroup can be used to organize tasks into hierarchical groups in the Airflow graph view. 
 
-## One Bite Dag Tasks
+## One Bite DAG
 Below is the graph view of the One Bite DAG and each of the tasks that run as a part of the DAG: 
 
 <img src="png_files/dag.png" width=100% height=70%>
