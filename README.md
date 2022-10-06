@@ -58,7 +58,7 @@ The [Tableau Public](https://public.tableau.com/app/profile/alec7813/viz/OneBite
 
 `Split By`: Allows users to split the trend line by any filter shown in the dashboard. This allows users to quickly slice-and-dice.
 
-`Metric`: This toggles the metric displayed in the dashboard. There are currently two available: `Reviews` and `Avg. Score`.
+`Metric`: This toggles the metric displayed in the dashboard.
 
 
 <img src="png_files/tableau.png" width=100% height=200%>
