@@ -15,29 +15,31 @@ The motivation for this project is primarily to gain experience using Apache Air
 <img src="pipeline.png" width=100% height=70%>
 
 ## Airflow DAG
-The Airflow DAG (Directed Acyclic Graph) below:
-
-- `set_run_config`: Tells the DAG run if it is backfilling data or performing an incremental load. This produces two dates run_start and run_end that are used in downstream tasks.
-
-- `oneBiteToS3Operator`: A custom operator that extracts data for rewiews that occur between the run_start and run_end from the One Bite website by looping through the review webpages.
-
-- `create_table`: Executes a SQL script in Snowflake that creates a table to copy from an S3 stage into if it doesn't already exist.
-
-- `delete_from_table`: Executes a SQL script in Snowflake that deletes from the table previously created between the run_start and run_end.
-
-- `copy_into_table`: Executes a SQL script to copy data from the S3 stage into Snowflake.
-
-- `dbt_compile`: Executes a dbt compile command to generate a fresh manifest.json file.
-
-- `dbt_run`: Parses the dbt manifest and creates an Airflow task group that runs all dbt models.
-
-- `dbt_test`: Parses the dbt manifest and creates an Airflow task group that tests all dbt models.
-
-- `dbt_to_sheets`s: Parses the dbt manifest, finds all models tagged with "sheets" and copies the model outputs to a google sheet using the custom SnowflakeToSheetsOperator. This google sheet acts as the serving layer for Tableau Public.
-
-
+Below are the individual tasks that run in the Airflow DAG (Directed Acyclic Graph):
 
 <img src="dag.png" width=100% height=70%>
+
+`set_run_config`: Tells the DAG run if it is backfilling data or performing an incremental load. This produces two dates run_start and run_end that are used in downstream tasks.
+
+`oneBiteToS3Operator`: A custom operator that extracts data for rewiews that occur between the run_start and run_end from the One Bite website by looping through the review webpages.
+
+`create_table`: Executes a SQL script in Snowflake that creates a table to copy from an S3 stage into if it doesn't already exist.
+
+`delete_from_table`: Executes a SQL script in Snowflake that deletes from the table previously created between the run_start and run_end.
+
+`copy_into_table`: Executes a SQL script to copy data from the S3 stage into Snowflake.
+
+`dbt_compile`: Executes a dbt compile command to generate a fresh manifest.json file.
+
+`dbt_run`: Parses the dbt manifest and creates an Airflow task group that runs all dbt models.
+
+`dbt_test`: Parses the dbt manifest and creates an Airflow task group that tests all dbt models.
+
+`dbt_to_sheets`s: Parses the dbt manifest, finds all models tagged with "sheets" and copies the model outputs to a google sheet using the custom SnowflakeToSheetsOperator. This google sheet acts as the serving layer for Tableau Public.
+
+
+/
+
 ### Project Directory
 
     .
