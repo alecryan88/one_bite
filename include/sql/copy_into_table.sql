@@ -1,4 +1,4 @@
-COPY INTO {{ params.schema }}.{{ params.table }} 
+sCOPY INTO {{ params.schema }}.{{ params.table }} 
 FROM (
     SELECT 
             METADATA$FILENAME as file_name,
