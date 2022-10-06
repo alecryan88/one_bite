@@ -21,7 +21,7 @@ Below are the individual tasks that run in the Airflow DAG (Directed Acyclic Gra
 
 `set_run_config`: Tells the DAG run if it is backfilling data or performing an incremental load. This produces two dates run_start and run_end that are used in downstream tasks.
 
-`oneBiteToS3Operator`: A custom operator that extracts data for rewiews that occur between the run_start and run_end from the One Bite website by looping through the review webpages.
+`oneBiteToS3Operator`: A custom operator that is used to download data from One Bite API and load that data to S3.
 
 `create_table`: Executes a SQL script in Snowflake that creates a table to copy from an S3 stage into if it doesn't already exist.
 
