@@ -46,7 +46,7 @@ Below is the graph view of the One Bite DAG and each of the tasks that run as a 
 
 `dbt_test`: Parses the dbt manifest and creates an Airflow task group that tests all dbt models.
 
-`dbt_to_sheets`s: Parses the dbt manifest, finds all models tagged with "sheets" and copies the model outputs to a google sheet using the custom SnowflakeToSheetsOperator. This google sheet acts as the serving layer for Tableau Public.
+`dbt_to_sheets`: Parses the dbt manifest, finds all models tagged with "sheets" and copies the model outputs to a google sheet using the custom SnowflakeToSheetsOperator. This google sheet acts as the serving layer for Tableau Public.
 
 
 ## Tableau Dashboard 
